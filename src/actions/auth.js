@@ -2,8 +2,9 @@
 
 import bcrypt from "bcrypt";
 import { redirect } from "next/navigation";
-import { RegisterFormSchema } from "@/lib/rules";
 import { getCollection } from "@/lib/db.js";
+import { RegisterFormSchema } from "@/lib/rules";
+import { createSession } from "@/lib/sessions";
 
 export async function register(state, formData) {
   //await new Promise(resolve => setTimeout(resolve, 3000));
